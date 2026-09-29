@@ -18,6 +18,10 @@ The pipeline takes a two-step approach:
 
 *See `Documentation_template.md` for a comprehensive write-up of the methodology and architecture.*
 
+## Available Models (Brains)
+This repository includes two trained models in the `output/` directory, depending on your computational constraints:
+- **`fast_model.pkl`**: This is the default production model. It uses 8 string-similarity features. It drops heavy semantic embedding features to ensure inference runs extremely fast and memory-efficiently across millions of candidates.
+- **`lgb_model.pkl`**: This is the highest-accuracy model. It uses 9 features, including heavy semantic embeddings (`embedding_sim`). Use this if you have high memory/compute availability and need maximum precision.
 ## How to Run
 
 ### 1. Install Dependencies

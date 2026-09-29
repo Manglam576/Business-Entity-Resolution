@@ -1,7 +1,6 @@
 dataset/
-output/*
-!output/fast_model.pkl
-!output/matching_results.tsv
+output/candidate_pairs.tsv
+
 __pycache__/
 *.pyc
 .DS_Store
